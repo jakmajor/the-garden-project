@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import './App.css';
+import Navbar from "./Navbar";
+import LoginPage from './LoginPage.js';
 
 function App() {
+
+  useEffect(() => {
+    // auto-login
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  const [user, setUser] = useState(null);
+
+  if (!user) return <LoginPage setUser={setUser} />;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar user={user} setUser={setUser} />
+      
     </div>
   );
 }
