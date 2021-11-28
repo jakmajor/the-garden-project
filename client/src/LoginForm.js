@@ -57,8 +57,6 @@ function LoginForm({ setUser = () => console.log('') }) {
                     {isLoading ? "Loading..." : "Login"}
                 </button>
             </div>
-            <div>
-            </div>
         </form>
     );
 }

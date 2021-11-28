@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Analogue";
+  src: url("./fonts/AnalogueRegular.eot");
+  src: url("./fonts/AnalogueRegular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/AnalogueRegular.woff2") format("woff2"),
+    url("./fonts/AnalogueRegular.woff") format("woff"),
+    url("./fonts/AnalogueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  src: url("./fonts/Yantramanav-Regular.eot");
+  src: url("./fonts/Yantramanav-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Yantramanav-Regular.woff2") format("woff2"),
+    url("./fonts/Yantramanav-Regular.woff") format("woff"),
+    url("./fonts/Yantramanav-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  src: url("./fonts/Yantramanav-Light.eot");
+  src: url("./fonts/Yantramanav-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Yantramanav-Light.woff2") format("woff2"),
+    url("./fonts/Yantramanav-Light.woff") format("woff"),
+    url("./fonts/Yantramanav-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Analogue" !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +77,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.login-text {
+  outline: none !important;
+  border: 0px;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px solid #000000;
+  padding: 10px 0px;
+  width: 100%;
+}
+.signout-button {
+  font-family: Yantramanav;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 14px;
+  color: #000000;
+  padding: 5px 12px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.login-button-switch{
+  margin-top: 30px;
 }
