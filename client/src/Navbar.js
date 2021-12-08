@@ -1,7 +1,16 @@
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import styles from './index.module.css'
 
 
-function Navbar({ showAvatar = true }) {
+function Navbar({user, setUser}) {
+
+    const signOut = () => {
+        fetch("/logout", { method: "DELETE" }).then((r) => {
+            if (r.ok) {
+              setUser(null);
+            }
+          });
+    }
 
     return (
         <div className="navbar">
@@ -12,13 +21,11 @@ function Navbar({ showAvatar = true }) {
                             <p className="logo">the garden project</p>
                         </Link>
                     </div>
-                    <div className="col float-right">
-                        {showAvatar &&
-                            <div className="links">
-                                <NavLink className="nav-link" to="/Profile"><img></img></NavLink>
-                            </div>
-                        }
-                    </div>
+                    {user &&
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'right'}} className="col float-right">
+                            <button className={styles.sign_out} onClick={signOut}>Sign out</button>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

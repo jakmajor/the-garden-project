@@ -1,0 +1,72 @@
+.modal_wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.modal {
+  height: 700px;
+  width: 80%;
+  align-self: center;
+  margin: 0px auto;
+  background-color: white;
+  text-align: left;
+  padding: 0px 20px;
+  border-radius: 5px;
+  position: relative;
+}
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.heading {
+  margin: 20px 0px;
+  font-family: "Analogue" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: .5px;
+}
+.modal_content {
+  overflow-y: scroll;
+  height: 89%;
+  width: 100%;
+}
+.plant_item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.plant_item:hover {
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+.close_btn{
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 1px 10px 2px 10px;
+    border: 2px solid #112b18;
+    color: #112b18;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 2px;
+}
+.close_btn:hover{
+    background-color: #112b18;
+    color: #fff;
+}

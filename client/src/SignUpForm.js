@@ -4,7 +4,6 @@ function SignUpForm({ setUser = () => console.log('') }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
-    const [imageUrl, setImageUrl] = useState("");
     const [bio, setBio] = useState("");
     const [name, setName] = useState("");
     const [errors, setErrors] = useState([]);
@@ -24,7 +23,6 @@ function SignUpForm({ setUser = () => console.log('') }) {
                 username,
                 password,
                 password_confirmation: passwordConfirmation,
-                image_url: imageUrl,
                 bio,
             }),
         }).then((r) => {
@@ -87,17 +85,6 @@ function SignUpForm({ setUser = () => console.log('') }) {
                     value={passwordConfirmation}
                     onChange={(e) => setPasswordConfirmation(e.target.value)}
                     autoComplete="current-password"
-                />
-            </div>
-            <div className="login-text-field">
-                <label htmlFor="imageUrl" ></label>
-                <input
-                    className="login-text"
-                    placeholder="Profile Image"
-                    type="text"
-                    id="imageUrl"
-                    value={imageUrl}
-                    onChange={(e) => setImageUrl(e.target.value)}
                 />
             </div>
             <div className="login-text-field">

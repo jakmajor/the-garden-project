@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Navbar from "./Navbar";
 import LoginPage from './LoginPage.js';
+import Home from "./components/home";
 
 function App() {
 
@@ -17,12 +18,16 @@ function App() {
 
   const [user, setUser] = useState(null);
 
-  if (!user) return <LoginPage setUser={setUser} />;
-
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser} />
-      
+      <Routes>
+        {!user ?
+          <Route exact path="/" element={<LoginPage setUser={setUser} />} />
+        :
+          <Route exact path="/" element={<Home user={user} />} />
+        }
+      </Routes>
     </div>
   );
 }

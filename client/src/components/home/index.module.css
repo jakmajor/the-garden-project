@@ -1,0 +1,36 @@
+.activities_list {
+  text-align: left;
+  background-color: #e2dcd5;
+  padding: 20px;
+  margin: 20px 0px;
+  margin-top: 100px;
+  border-radius: 5px;
+  color: #112b18;
+}
+.activities_date {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-family: "Analogue" !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  color: #112b18;
+  letter-spacing: 1px;
+}
+.act_txt, .act_txt *{
+  font-weight: 300 !important;
+}
+.add_button{
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 2px 10px;
+    border: 2px solid #112b18;
+    color: #112b18;
+    cursor: pointer;
+    font-size: 20px;
+}
+.add_button:hover{
+    background-color: #112b18;
+    color: #fff;
+}

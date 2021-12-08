@@ -1,5 +1,5 @@
 .home_txt {
-  font-family: Analogue;
+  font-family: 'Analogue';
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -34,4 +34,19 @@
   width: 60%;
   z-index: 1;
   margin-top: 20px;
+}
+
+.sign_out{
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 3px;
+  padding: 8px 14px;
+  border: 1px solid #112b18;
+  color: #112b18;
+  cursor: pointer;
+  font-size: 14px;
+}
+.sign_out:hover{
+  background-color: #112b18;
+  color: #fff;
 }

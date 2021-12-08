@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   resources :users
   resources :gardens
-  resources :plants
+  resources :activities, only: [:index, :create, :delete]
+  resources :plants, only: [:index, :create, :delete]
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
